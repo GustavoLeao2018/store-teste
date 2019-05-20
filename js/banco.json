@@ -2,12 +2,10 @@
     {
         "nome": "PyCharm Community Edition",
         "comando": [
-            {
-                "comando" : "sudo snap install pycharm-community --classic",
-                "comando" : "sudo snap install pycharm-community --candidate --classic",
-                "comando" : "sudo snap install pycharm-community --beta --classic",
-                "comando" : "sudo snap install pycharm-community --edge --classic"
-            }
+                "sudo snap install pycharm-community --classic",
+                "sudo snap install pycharm-community --candidate --classic",
+                "sudo snap install pycharm-community --beta --classic",
+                "sudo snap install pycharm-community --edge --classic"
         ], 
         "icon": [
             "https://dashboard.snapcraft.io/site_media/appmedia/2017/11/PyCharmCore256.png",
@@ -307,6 +305,26 @@
         ],
         "video": "",
         "categoria": ["Produtividade", "Social", "Destaques"]
+    },
+    {
+        "nome": "Plex Media Server",
+        "comando": [
+            "sudo snap install plexmediaserver"
+        ], 
+        "icon": [
+            "https://dashboard.snapcraft.io/site_media/appmedia/2018/10/plex-pms-icon.png",
+            "https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_1170/https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Devices.png",
+            "https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_1170/https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Lifestyle-iOS_wcMEJcN.jpg",
+            "https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_1170/https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Grid-Guide_UCrJV7W.png",
+            "https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_1170/https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-News_Qm4FP7X.jpg",
+            "https://res.cloudinary.com/canonical/image/fetch/q_auto,f_auto,w_1170/https://dashboard.snapcraft.io/site_media/appmedia/2018/10/Plex-Photos_1W8fhH0.jpg"
+        ],
+        "descricao": [ 
+            "O Plex organiza magicamente suas bibliotecas de mídia e as transmite para qualquer dispositivo",
+            "O Plex organiza magicamente suas bibliotecas de mídia e as transmite para qualquer dispositivo - incluindo todas as suas bibliotecas de vídeos, músicas e fotos. Com um Plex Pass, um sintonizador suportado e uma antena digital, você também pode assistir e gravar TV de transmissão gratuita, incluindo as principais redes. Você também pode desfrutar de podcasts Plus Plex News - o feed de notícias de vídeo personalizado mais equilibrado e abrangente que existe por aí. Experimente o Plex GRÁTIS! Organize magicamente todas as suas mídias pessoais - fotos, músicas, filmes, programas, até TV DVR - e transmita-as para qualquer dispositivo em uma interface bonita e simples, e o Plex adiciona descrições detalhadas, ilustrações e outras informações relacionadas Podcasts estão aqui! Pesquise seus favoritos ou descubra novos por meio de recomendações personalizadas. Mais: pulo de 30 segundos, reprodução de velocidade variável, descoberta avançada e suporte completo ao estilo Plex para status de reprodução entre dispositivos (incluindo o On Deck, para que você possa voltar de onde parou em qualquer dispositivo) Receba notícias de vídeo personalizadas e confiáveis ​​de mais de 190 parceiros editoriais globais (e crescendo!), Incluindo CBS, Financial Times, Euronews e principais fontes de notícias locais para mais de 80% dos mercados nos EUA.  Cortar o cordão! Seja premium com o Plex Pass e use o Plex Live TV e o DVR para assistir e gravar gratuitamente a TV HD, como NBC, ABC, CBS e FOX, com qualquer antena e sintonizador digital compatível Aproveite os recursos gratuitos, como acesso remoto, compartilhamento, segurança e transmissão, veja sua mídia aprimorada com descrições detalhadas, ilustrações, classificações e muito mais Aproveite os recursos premium com uma assinatura do Plex Pass: DVR e TV ao vivo, upload da câmera, fotos Premium, sincronização com dispositivos móveis, controle dos pais, benefícios VIP e muito mais Quer usar o Plex em todos os seus dispositivos, a qualquer hora, em qualquer lugar? Visite https://www.plex.tv/ para mais informações."
+        ],
+        "video": "<iframe width=\"820\" height=\"461\" src=\"https://www.youtube.com/embed/Ldq38kkeIZQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+        "categoria": ["Entretenimento", "Destaques"]
     }
 ]
 

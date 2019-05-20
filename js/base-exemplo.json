@@ -1,0 +1,20 @@
+,
+    {
+        "nome": "",
+        "comando": [
+            "sudo snap install  --classic",
+            "sudo snap install  --candidate --classic",
+            "sudo snap install  --beta --classic",
+            "sudo snap install  --edge --classic"
+        ], 
+        "icon": [
+            "",
+            ""
+        ],
+        "descricao": [ 
+            "",
+            ""
+        ],
+        "video": "",
+        "categoria": ["", "", ""]
+    }

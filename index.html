@@ -52,10 +52,12 @@
             <section class="linha" >
                 <article class="coluna" ng-repeat="pacote in pacotes_snaps">
                     <div class="titulo">
-                        <h3 ng-bind="pacote.nome"></h3>
+                            <h3 ng-bind="pacote.nome"></h3>
                     </div>
-                    <div class="imagem">
-                            <img src="{{pacote.icon[0]}}" alt="{{pacote.nome}}" />
+                    <div class="imagem">   
+                            <a href="{{'#'+remover(pacote.nome)}}"> 
+                                <img src="{{pacote.icon[0]}}" alt="{{pacote.nome}}" />
+                            </a>
                     </div>
                     <div class="rodape">
                         <p ng-bind="pacote.descricao[0]"></p>
@@ -78,21 +80,21 @@
 
             
             <ul>
-                <li><a href="" class="tag">Desenvolvimento</a></li>
-                <li><a href="" class="tag">Entretenimento</a></li>
-                <li><a href="" class="tag">Personalização</a></li>
-                <li><a href="" class="tag">Utilidades</a></li>
-                <li><a href="" class="tag">Educação</a></li>
-                <li><a href="" class="tag">Arte e Design</a></li>
-                <li><a href="" class="tag">Música e Áudio</a></li>
-                <li><a href="" class="tag">Produtividade</a></li>
-                <li><a href="" class="tag">Social</a></li>
-                <li><a href="" class="tag">Jogos</a></li>
-                <li><a href="" class="tag">Foto e vídeo</a></li>
+                <li><a href="" class="tag-pesquisa">Desenvolvimento</a></li>
+                <li><a href="" class="tag-pesquisa">Entretenimento</a></li>
+                <li><a href="" class="tag-pesquisa">Personalização</a></li>
+                <li><a href="" class="tag-pesquisa">Utilidades</a></li>
+                <li><a href="" class="tag-pesquisa">Educação</a></li>
+                <li><a href="" class="tag-pesquisa">Arte e Design</a></li>
+                <li><a href="" class="tag-pesquisa">Música e Áudio</a></li>
+                <li><a href="" class="tag-pesquisa">Produtividade</a></li>
+                <li><a href="" class="tag-pesquisa">Social</a></li>
+                <li><a href="" class="tag-pesquisa">Jogos</a></li>
+                <li><a href="" class="tag-pesquisa">Foto e vídeo</a></li>
             </ul>
             
             <section class="linha-pacote" ng-repeat="pacote in pacotes_snaps">
-                    <article class="coluna-pacote">
+                    <article class="coluna-pacote"  id="{{remover(pacote.nome)}}">
                         <div class="titulo-pacote">
                             <img src="{{pacote.icon[0]}}" alt="{{pacote.nome}}" class="icon-min" />
                             <h3 ng-bind="pacote.nome"></h3>
@@ -102,20 +104,7 @@
                                 <img src="{{icone}}" alt="{{pacote.nome}}" />
                             </div>  
                         </div>
-                        <div class="botao-pacote">
-                            <select ng-options="comando in pacote.comando">
-                                <option value="">Selecione</option>
-                            </select>
-                            
-                            <input type="text" ng-disabled="true" value="" id="comando">
-
-                            <button onclick="copiar()">
-                                Copiar
-                            </button>
-                           
-                     
-                        </div>
-
+                        
                         
 
                         <div class="rodape-pacote">

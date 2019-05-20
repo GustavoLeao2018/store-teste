@@ -66,4 +66,8 @@ angular.module("eagleStore").controller("eagleStoreCtrl", ($scope, $http) => {
         else{ return false;}
     };
 
+    $scope.remover = function(nome) {
+        return nome.replace(/[\s]/g, '-');
+    };
+
 });
