@@ -1,0 +1,244 @@
+/*
+Cores em hexadecimal:
+
+nome            | fundo     | texto     |
+Tomate          | #FF6347   | #fff      | 
+laranja         | #FFA500   | #fff      |
+Trapaceiro azul | #1E90FF   | #fff      |
+MediumSeaGreen  | #3CB371   | #fff      |
+cinzento        | #808080   | #fff      |
+Azul ardósia    | #6A5ACD   | #fff      |
+Tolet           | #EE82EE   | #fff      |
+Cinza claro     | #D3D3D3   | #000      |
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Links */
+a {
+    color: darkred;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+section .imagem {
+    text-align: center;
+}
+
+/* Cabeçalho da Página */
+header {
+    text-align: center;
+    background-color: #6A5ACD;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    margin-top: 10px;
+}
+
+header img {
+    width: 150px;
+    mix-blend-mode: color-burn;
+}
+
+/* Rodapé da página */
+footer {
+    background-color: #6A5ACD;
+    color: white;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 35px;
+}
+
+/* Tag */
+.tag {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+
+/* Menu */
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    list-style: none;
+    background-color: #6A5ACD;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+nav ul li a {
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+
+/* Formulário */
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=tel] {
+    border: none;
+    border-bottom: 3px solid darkred; 
+    width: 99%;
+    opacity: 0.5;
+    padding: 10px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+input[type=tel]:focus {
+    opacity: 1;
+}
+
+
+button, input[type=submit] {
+    background-color: darkred;
+    color: white;
+    border: 1px solid darkred;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px; 
+    opacity: 1;
+    width: 99%;
+}
+
+button:hover, input[type=submit]:hover {
+    opacity: 0.8; 
+}
+
+/* Area principal */
+main {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.coluna { margin: 10px; }
+.coluna-pacote { margin: 10px; }
+
+.titulo {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.titulo-pacote {
+    background-color: #3CB371;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.imagem {
+    background-color: #1E90FF;
+    color: black;
+    padding: 10px;
+}
+.imagem img { width: 200px; }
+.imagem:hover { opacity: 0.5; }
+
+.rodape {
+    background-color: #FF6347;
+    color: white;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    line-height: 35px;
+}
+.rodape-pacote {
+    background-color: #3CB371;
+    color: white;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    line-height: 35px;
+}
+
+.icon-min {
+    width: 60px;
+    height: 60px;
+}
+
+.botao-pacote {
+    background-color: #D3D3D3; 
+}
+
+
+.linha {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+@media only screen and (max-width: 1100px){
+    .linha {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .linha {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .linha {
+        grid-template-columns: auto;
+    }
+}
+
+.dialogo {
+    border: 1px sild black !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    margin: 10px !important;    
+    background-color: #FF6347;
+    color: white;
+}
+
+.botao-fechar {
+    color: white;
+    cursor: pointer;
+    float: right;
+}
+.botao-fechar:hover {
+    color: black;
+}
