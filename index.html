@@ -101,7 +101,7 @@
                         </div>
                         <div class="carrosel-pacote">
                             <div ng-repeat="icone in pacote.icon">
-                                <img src="{{icone}}" alt="{{pacote.nome}}" />
+                                <img ng-if="icone != pacote.icon[0]" src="{{icone}}" alt="{{pacote.nome}}" />
                             </div>  
                         </div>
                         
