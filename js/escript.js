@@ -2,6 +2,7 @@ angular.module("eagleStore", []);
 angular.module("eagleStore").controller("eagleStoreCtrl", ($scope, $http) => {
     $scope.titulo = "Eagle Store";
     $scope.subtitulo = "Seja bem-vindo!";
+    $scope.opcTag = [true, false, false, false, false, false, false, false, false, false, false, false];
 
     $scope.trocarSubtitulo = (subtitulo) => {
         $scope.subtitulo = subtitulo;
@@ -70,8 +71,19 @@ angular.module("eagleStore").controller("eagleStoreCtrl", ($scope, $http) => {
         return nome.replace(/[\s]/g, '-');
     };
 
-    $scope.pesquisarPor = function(nome) {
+    $scope.pesquisarPor = function(nome, id) {
         $scope.categoriaPesquisada = nome;
+        
+        
+        for(i = 0; i < $scope.opcTag.length; i++){
+            $scope.opcTag[i] = false;
+            if(i == id){
+                if($scope.opcTag[id] == true)$scope.opcTag[id] = false;
+                else $scope.opcTag[id] = true;
+            }
+        }
+        
+        console.log($scope.opcTag);
     };
 
 });

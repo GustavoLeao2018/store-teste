@@ -20,6 +20,7 @@
     "ng-dialog": "^1.4.0",
     "ngclipboard": "^2.0.0",
     "popper": "^1.0.1",
+    "popper.js": "^1.15.0",
     "slick-carousel": "^1.8.1"
   }
 }

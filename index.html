@@ -2,12 +2,12 @@
 <html lang="pt-br" ng-app="eagleStore" ng-controller="eagleStoreCtrl">
 <head>
     <meta charset="utf-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
     <title>Eagle Store</title>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
     <link rel="stylesheet" href="css/estilo.css" />
-
 
 
     <script src="node_modules/angular/angular.min.js"></script>
@@ -80,27 +80,66 @@
 
             
             <ul>
-                <li><a href="" ng-click="pesquisarPor('')" class="tag-pesquisa">Todos</a></li>
-                <li><a href="" ng-click="pesquisarPor('Desenvolvimento')" class="tag-pesquisa">Desenvolvimento</a></li>
-                <li><a href="" ng-click="pesquisarPor('Entretenimento')" class="tag-pesquisa">Entretenimento</a></li>
-                <li><a href="" ng-click="pesquisarPor('Personalização')"  class="tag-pesquisa">Personalização</a></li>
-                <li><a href="" ng-click="pesquisarPor('Utilidades')"  class="tag-pesquisa">Utilidades</a></li>
-                <li><a href="" ng-click="pesquisarPor('Educação')"  class="tag-pesquisa">Educação</a></li>
-                <li><a href="" ng-click="pesquisarPor('Arte e Design')"  class="tag-pesquisa">Arte e Design</a></li>
-                <li><a href="" ng-click="pesquisarPor('Música e Áudio')"  class="tag-pesquisa">Música e Áudio</a></li>
-                <li><a href="" ng-click="pesquisarPor('Produtividade')"  class="tag-pesquisa">Produtividade</a></li>
-                <li><a href="" ng-click="pesquisarPor('Social')"  class="tag-pesquisa">Social</a></li>
-                <li><a href="" ng-click="pesquisarPor('Jogos')"  class="tag-pesquisa">Jogos</a></li>
-                <li><a href="" ng-click="pesquisarPor('Foto e vídeo')"  class="tag-pesquisa">Foto e vídeo</a></li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[0]"   /> 
+                    <a href="" ng-click="pesquisarPor('', 0)"  class="tag-pesquisa">Todos</a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[1]"  />
+                    <a href="" ng-click="pesquisarPor('Desenvolvimento', 1)" class="tag-pesquisa"> Desenvolvimento </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[2]"    />
+                    <a href="" ng-click="pesquisarPor('Entretenimento', 2)" class="tag-pesquisa"> Entretenimento </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[3]"    />
+                    <a href="" ng-click="pesquisarPor('Personalização', 3)"  class="tag-pesquisa"> Personalização </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[4]"    />
+                    <a href="" ng-click="pesquisarPor('Utilidades', 4)"  class="tag-pesquisa"> Utilidades </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[5]"   />
+                    <a href="" ng-click="pesquisarPor('Educação', 5)"  class="tag-pesquisa"> Educação </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[6]"    />
+                    <a href="" ng-click="pesquisarPor('Arte e Design', 6)"  class="tag-pesquisa"> Arte e Design </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[7]"    />
+                    <a href="" ng-click="pesquisarPor('Música e Áudio', 7)"  class="tag-pesquisa"> Música e Áudio </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"   ng-checked="opcTag[8]"   />
+                    <a href="" ng-click="pesquisarPor('Produtividade', 8)"  class="tag-pesquisa"> Produtividade </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[9]"    />
+                    <a href="" ng-click="pesquisarPor('Social', 9)"  class="tag-pesquisa"> Social </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"  ng-checked="opcTag[10]"   />
+                    <a href="" ng-click="pesquisarPor('Jogos', 10)"  class="tag-pesquisa"> Jogos </a>
+                </li>
+                <li>
+                    <input type="radio" disabled="false"   ng-checked="opcTag[11]"  />
+                    <a href="" ng-click="pesquisarPor('Foto e vídeo', 11)"  class="tag-pesquisa"> Foto e vídeo</a>
+                </li>
             </ul>
             
-            <section class="linha-pacote" ng-repeat="pacote in pacotes_snaps | orderBy: 'nome' | filter: {nome: pesquisar} | filter: {categoria: categoriaPesquisada}">
+            <section class="linha-pacote" ng-repeat="pacote in pacotes_snaps | orderBy: 'nome' | filter: pesquisar | filter: {categoria: categoriaPesquisada}">
                     <article class="coluna-pacote"  id="{{remover(pacote.nome)}}">
                         <div class="titulo-pacote">
                             <img src="{{pacote.icon[0]}}" alt="{{pacote.nome}}" class="icon-min" />
                             <h3 ng-bind="pacote.nome"></h3>
                         </div>
+
                         <div class="carrosel-pacote">
+                                
+                            
                             <div ng-repeat="icone in pacote.icon">
                                 <img ng-if="icone != pacote.icon[0]" src="{{icone}}" alt="{{pacote.nome}}" />
                             </div>  
