@@ -50,7 +50,7 @@
             <p> Veja quais são os aplicativos em destaque:</p>
             
             <section class="linha" >
-                <article class="coluna" ng-repeat="pacote in pacotes_snaps">
+                <article class="coluna" ng-repeat="pacote in pacotes_snaps | filter: {categoria: 'destaques'} | orderBy: 'nome'">
                     <div class="titulo">
                             <h3 ng-bind="pacote.nome"></h3>
                     </div>
@@ -75,25 +75,26 @@
         <section id="loja">
             <h3>Loja de Aplicativos</h3>
             
-            <input type="search" name="pesquisar" id="pesquisar" placeholder="Digite seu aplicativo aqui" />
+            <input type="search" name="pesquisar" id="pesquisar" ng-model="pesquisar" placeholder="Digite seu aplicativo aqui" />
             <input type="submit" value="Pesquisar" />
 
             
             <ul>
-                <li><a href="" class="tag-pesquisa">Desenvolvimento</a></li>
-                <li><a href="" class="tag-pesquisa">Entretenimento</a></li>
-                <li><a href="" class="tag-pesquisa">Personalização</a></li>
-                <li><a href="" class="tag-pesquisa">Utilidades</a></li>
-                <li><a href="" class="tag-pesquisa">Educação</a></li>
-                <li><a href="" class="tag-pesquisa">Arte e Design</a></li>
-                <li><a href="" class="tag-pesquisa">Música e Áudio</a></li>
-                <li><a href="" class="tag-pesquisa">Produtividade</a></li>
-                <li><a href="" class="tag-pesquisa">Social</a></li>
-                <li><a href="" class="tag-pesquisa">Jogos</a></li>
-                <li><a href="" class="tag-pesquisa">Foto e vídeo</a></li>
+                <li><a href="" ng-click="pesquisarPor('')" class="tag-pesquisa">Todos</a></li>
+                <li><a href="" ng-click="pesquisarPor('Desenvolvimento')" class="tag-pesquisa">Desenvolvimento</a></li>
+                <li><a href="" ng-click="pesquisarPor('Entretenimento')" class="tag-pesquisa">Entretenimento</a></li>
+                <li><a href="" ng-click="pesquisarPor('Personalização')"  class="tag-pesquisa">Personalização</a></li>
+                <li><a href="" ng-click="pesquisarPor('Utilidades')"  class="tag-pesquisa">Utilidades</a></li>
+                <li><a href="" ng-click="pesquisarPor('Educação')"  class="tag-pesquisa">Educação</a></li>
+                <li><a href="" ng-click="pesquisarPor('Arte e Design')"  class="tag-pesquisa">Arte e Design</a></li>
+                <li><a href="" ng-click="pesquisarPor('Música e Áudio')"  class="tag-pesquisa">Música e Áudio</a></li>
+                <li><a href="" ng-click="pesquisarPor('Produtividade')"  class="tag-pesquisa">Produtividade</a></li>
+                <li><a href="" ng-click="pesquisarPor('Social')"  class="tag-pesquisa">Social</a></li>
+                <li><a href="" ng-click="pesquisarPor('Jogos')"  class="tag-pesquisa">Jogos</a></li>
+                <li><a href="" ng-click="pesquisarPor('Foto e vídeo')"  class="tag-pesquisa">Foto e vídeo</a></li>
             </ul>
             
-            <section class="linha-pacote" ng-repeat="pacote in pacotes_snaps">
+            <section class="linha-pacote" ng-repeat="pacote in pacotes_snaps | orderBy: 'nome' | filter: {nome: pesquisar} | filter: {categoria: categoriaPesquisada}">
                     <article class="coluna-pacote"  id="{{remover(pacote.nome)}}">
                         <div class="titulo-pacote">
                             <img src="{{pacote.icon[0]}}" alt="{{pacote.nome}}" class="icon-min" />

@@ -70,4 +70,8 @@ angular.module("eagleStore").controller("eagleStoreCtrl", ($scope, $http) => {
         return nome.replace(/[\s]/g, '-');
     };
 
+    $scope.pesquisarPor = function(nome) {
+        $scope.categoriaPesquisada = nome;
+    };
+
 });
