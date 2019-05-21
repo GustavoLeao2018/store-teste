@@ -20,6 +20,27 @@ Cinza claro     | #D3D3D3   | #000      |
 }
 
 
+body {
+    display: grid;
+    grid-template-areas: 'cabecalho' 'barrademenu' 'main' 'rodape';
+}
+
+header { grid-area: cabecalho; }
+nav    { grid-area: barrademenu;      }
+main   { grid-area: main;      }
+footer { grid-area: rodape;    }
+
+
+/* body {
+    grid-template-areas: 'cabecalho' 'main' 'barrademenu' 'rodape';    
+} */
+nav {
+    position: sticky;
+    top: 0;    
+}
+
+
+
 /* Links */
 a {
     color: darkred;
@@ -205,8 +226,6 @@ main {
 .linha {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    align-items: stretch;
-    
 }
 
 
