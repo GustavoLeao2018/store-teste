@@ -11,6 +11,7 @@
   "devDependencies": {
     "angular": "^1.7.8",
     "angularjs": "0.0.1",
+    "bootstrap": "^4.3.1",
     "clipboard": "^2.0.4",
     "flickity": "^2.2.0",
     "jquery": "^3.4.1",
@@ -18,6 +19,7 @@
     "jquery-ui": "^1.12.1",
     "ng-dialog": "^1.4.0",
     "ngclipboard": "^2.0.0",
+    "popper": "^1.0.1",
     "slick-carousel": "^1.8.1"
   }
 }
