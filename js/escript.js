@@ -86,4 +86,14 @@ angular.module("eagleStore").controller("eagleStoreCtrl", ($scope, $http) => {
         console.log($scope.opcTag);
     };
 
+    $scope.clicado = true;
+
+    $scope.show = () => {
+        if($scope.clicado == false){
+            $scope.clicado = true;
+        }
+        else {
+            $scope.clicado = false;
+        }
+    };
 });
