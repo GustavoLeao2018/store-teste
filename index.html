@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <title>Eagle Store</title>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+    
     <link rel="stylesheet" href="css/estilo.css" />
 
-
+    
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="js/escript.js"></script>
     <script src="js/escript-1.js"></script>
+    <script src="js/escript-2.js"></script>
+
+    
     
 </head>
 <body> 
@@ -75,11 +77,9 @@
         <section id="loja">
             <h3>Loja de Aplicativos</h3>
             
-            <input type="search" name="pesquisar" id="pesquisar" ng-model="pesquisar" placeholder="Digite seu aplicativo aqui" />
-            <input type="submit" value="Pesquisar" />
-
-            
-            <ul>
+            <input type="search" class="pesquisa" name="pesquisar" id="pesquisar" ng-model="pesquisar" placeholder="Digite seu aplicativo aqui" />
+                        
+            <ul class="pesquisar-lista">
                 <li>
                     <input type="radio" disabled="false"  ng-checked="opcTag[0]"   /> 
                     <a href="" ng-click="pesquisarPor('', 0)"  class="tag-pesquisa">Todos</a>
@@ -137,16 +137,13 @@
                             <h3 ng-bind="pacote.nome"></h3>
                         </div>
 
-                        <div class="carrosel-pacote">
-                                
-                            
-                            <div ng-repeat="icone in pacote.icon">
-                                <img ng-if="icone != pacote.icon[0]" src="{{icone}}" alt="{{pacote.nome}}" />
-                            </div>  
-                        </div>
-                        
-                        
+                        <ul class="slider">
+                            <li ng-if="icone != pacote.icon[0]" ng-repeat="icone in pacote.icon">
+                                <img  src="{{icone}}" width="600" height="400" alt="">
+                            </li> 
+                        </ul>
 
+                        
                         <div class="rodape-pacote">
                             <p ng-bind="pacote.descricao[1]"></p>
                             <p>Tag's: 
@@ -160,7 +157,7 @@
 
         </section>
 
-        <section id="tab-sobre">
+        <section id="sobre">
                 <h3>Sobre</h3>
                 <p>Este site foi criado por:</p>
                 <ul>
@@ -196,10 +193,19 @@
                     <li><a href="https://www.shellscript.sh/"> Shell Script</a></li>
                 </ul>
         </section>
+
+        <section id="cadastro">
+            <h3>Cadastro</h3>
+            <p> Caso deseje se cadastrar para receber novidades de aplicativos novos e recomendações preencha abaixo: </p>
+            
+        </section>
     </main>
 
     <footer>
         <p> Copyright &copy; Gustavo Leão e Nicolas Machado - Eagle Linux</p>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smasicões">Smasicões</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smasicões">Smasicões</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
     </footer>
 
    
